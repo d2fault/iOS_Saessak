@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Alamofire
+import Kingfisher
 
 class CitizenViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -21,5 +23,13 @@ class CitizenViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        callCitizenApi()
+    }
+}
+
+func callCitizenApi() {
+    let baseURL = "https://moti.company"
+    AF.request(baseURL + "/api/v2/citizens").responseJSON { response in
+        print(response)
     }
 }
