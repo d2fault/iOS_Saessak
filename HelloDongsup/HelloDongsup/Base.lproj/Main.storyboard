@@ -53,20 +53,20 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bug-Zd-wBE">
-                                                    <rect key="frame" x="15" y="15" width="50" height="85"/>
+                                                    <rect key="frame" x="15" y="15" width="60" height="85"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="50" id="ZFn-2a-7Di"/>
-                                                        <constraint firstAttribute="width" constant="50" id="xlR-35-ZJl"/>
+                                                        <constraint firstAttribute="height" constant="60" id="ZFn-2a-7Di"/>
+                                                        <constraint firstAttribute="width" constant="60" id="xlR-35-ZJl"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5c5-Bz-4j4">
-                                                    <rect key="frame" x="75" y="26" width="42" height="21"/>
+                                                    <rect key="frame" x="85" y="16" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rjc-aj-gHg">
-                                                    <rect key="frame" x="75" y="57" width="42" height="21"/>
+                                                    <rect key="frame" x="85" y="47" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -81,11 +81,11 @@
                                                 <constraint firstItem="bug-Zd-wBE" firstAttribute="top" secondItem="FLC-X3-Haz" secondAttribute="top" constant="15" id="B8B-MT-X9R"/>
                                                 <constraint firstItem="bug-Zd-wBE" firstAttribute="leading" secondItem="FLC-X3-Haz" secondAttribute="leading" constant="15" id="JKg-T6-ZF6"/>
                                                 <constraint firstAttribute="trailing" secondItem="pHE-1C-nJb" secondAttribute="trailing" constant="15" id="R1a-eh-IHj"/>
+                                                <constraint firstItem="Rjc-aj-gHg" firstAttribute="top" secondItem="5c5-Bz-4j4" secondAttribute="bottom" constant="10" id="SET-bj-YOx"/>
                                                 <constraint firstAttribute="bottom" secondItem="bug-Zd-wBE" secondAttribute="bottom" constant="15" id="YTq-zl-bdP"/>
-                                                <constraint firstItem="5c5-Bz-4j4" firstAttribute="top" secondItem="FLC-X3-Haz" secondAttribute="topMargin" constant="15" id="ems-Cu-6Ym"/>
+                                                <constraint firstItem="5c5-Bz-4j4" firstAttribute="top" secondItem="FLC-X3-Haz" secondAttribute="topMargin" constant="5" id="ems-Cu-6Ym"/>
                                                 <constraint firstItem="5c5-Bz-4j4" firstAttribute="leading" secondItem="bug-Zd-wBE" secondAttribute="trailing" constant="10" id="hrt-td-Tur"/>
                                                 <constraint firstItem="Rjc-aj-gHg" firstAttribute="leading" secondItem="bug-Zd-wBE" secondAttribute="trailing" constant="10" id="krj-1t-S4b"/>
-                                                <constraint firstItem="Rjc-aj-gHg" firstAttribute="top" secondItem="5c5-Bz-4j4" secondAttribute="bottom" constant="10" id="xTi-B6-QVg"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -96,6 +96,10 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="3Sq-2u-V8c" id="lFp-ji-IgV"/>
+                                    <outlet property="delegate" destination="3Sq-2u-V8c" id="442-aN-2qB"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
