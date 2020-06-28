@@ -24,6 +24,7 @@
 		0709091324A878AC0082DAE8 /* KingfisherSwiftUIDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 0709091224A878AC0082DAE8 /* KingfisherSwiftUIDynamic */; };
 		0709091424A878AC0082DAE8 /* KingfisherSwiftUIDynamic in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 0709091224A878AC0082DAE8 /* KingfisherSwiftUIDynamic */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		0709091624A878AC0082DAE8 /* KingfisherSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 0709091524A878AC0082DAE8 /* KingfisherSwiftUI */; };
+		0709091924A89E050082DAE8 /* CitizenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0709091824A89E050082DAE8 /* CitizenModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -52,6 +53,7 @@
 		070908F624A645B10082DAE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		070908FC24A649540082DAE8 /* CitizenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitizenViewController.swift; sourceTree = "<group>"; };
 		0709090324A65D200082DAE8 /* CitizenTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitizenTableViewCell.swift; sourceTree = "<group>"; };
+		0709091824A89E050082DAE8 /* CitizenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitizenModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				070908F624A645B10082DAE8 /* Info.plist */,
 				070908FC24A649540082DAE8 /* CitizenViewController.swift */,
 				0709090324A65D200082DAE8 /* CitizenTableViewCell.swift */,
+				0709091824A89E050082DAE8 /* CitizenModel.swift */,
 			);
 			path = HelloDongsup;
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 			files = (
 				070908ED24A645B00082DAE8 /* ViewController.swift in Sources */,
 				070908E924A645B00082DAE8 /* AppDelegate.swift in Sources */,
+				0709091924A89E050082DAE8 /* CitizenModel.swift in Sources */,
 				070908EB24A645B00082DAE8 /* SceneDelegate.swift in Sources */,
 				0709090424A65D200082DAE8 /* CitizenTableViewCell.swift in Sources */,
 				070908FD24A649540082DAE8 /* CitizenViewController.swift in Sources */,

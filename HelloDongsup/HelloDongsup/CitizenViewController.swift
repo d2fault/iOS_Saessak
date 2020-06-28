@@ -25,11 +25,13 @@ class CitizenViewController: UIViewController, UITableViewDelegate, UITableViewD
         super.viewDidLoad()
         callCitizenApi()
     }
-}
-
-func callCitizenApi() {
-    let baseURL = "https://moti.company"
-    AF.request(baseURL + "/api/v2/citizens").responseJSON { response in
-        print(response)
+    
+    func callCitizenApi() {
+        let baseURL = "https://moti.company"
+        AF.request(baseURL + "/api/v2/citizens").responseJSON { response in
+            let decoder = JSONDecoder()
+            let result = try! decoder.decode(CitizenModel.self, from: response.data!)
+            print(result)
+        }
     }
 }
