@@ -15,18 +15,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ytg-8M-GPr">
-                                <rect key="frame" x="181" y="433" width="53" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ytg-8M-GPr">
+                                <rect key="frame" x="180.5" y="433" width="53" height="30"/>
                                 <state key="normal" title="citizens"/>
                                 <connections>
-                                    <segue destination="3Sq-2u-V8c" kind="presentation" id="Dbr-tx-qqv"/>
+                                    <action selector="buttonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qub-Lq-QHO"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZwE-OD-EM1">
+                                <rect key="frame" x="186" y="387" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ZwE-OD-EM1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7vz-2g-cY4"/>
+                            <constraint firstItem="ytg-8M-GPr" firstAttribute="top" secondItem="ZwE-OD-EM1" secondAttribute="bottom" constant="25" id="BpB-aZ-3E4"/>
+                            <constraint firstItem="ytg-8M-GPr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KYR-Y1-Dgd"/>
+                            <constraint firstItem="ytg-8M-GPr" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Vqf-Cj-m7k"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="likedNameLabel" destination="ZwE-OD-EM1" id="Ra0-Ck-iRq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -35,9 +49,9 @@
         <!--Citizen View Controller-->
         <scene sceneID="gyQ-Qt-fHd">
             <objects>
-                <viewController id="3Sq-2u-V8c" customClass="CitizenViewController" customModule="HelloDongsup" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CitizenViewController" id="3Sq-2u-V8c" customClass="CitizenViewController" customModule="HelloDongsup" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UuN-yC-CEw">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2d9-WR-sBQ">
@@ -71,9 +85,13 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pHE-1C-nJb">
-                                                    <rect key="frame" x="360" y="42.5" width="39" height="30"/>
-                                                    <state key="normal" title="좋아요"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pHE-1C-nJb">
+                                                    <rect key="frame" x="378" y="46.5" width="21" height="22"/>
+                                                    <state key="normal" image="heart" catalog="system"/>
+                                                    <state key="selected" image="heart.fill" catalog="system"/>
+                                                    <connections>
+                                                        <action selector="buttonClicked:" destination="Zyi-Ba-4VN" eventType="touchUpInside" id="fWP-sF-K80"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -92,7 +110,7 @@
                                             <outlet property="citizenCatchphrase" destination="Rjc-aj-gHg" id="qfc-1I-KRW"/>
                                             <outlet property="citizenImage" destination="bug-Zd-wBE" id="xym-ur-vSm"/>
                                             <outlet property="citizenName" destination="5c5-Bz-4j4" id="xDA-wt-BCy"/>
-                                            <outlet property="likeButton" destination="pHE-1C-nJb" id="1Pi-qE-vIE"/>
+                                            <outlet property="likeButton" destination="pHE-1C-nJb" id="g1X-Gl-NNv"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -114,4 +132,8 @@
             <point key="canvasLocation" x="989.85507246376824" y="138.61607142857142"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="heart" catalog="system" width="128" height="109"/>
+        <image name="heart.fill" catalog="system" width="128" height="109"/>
+    </resources>
 </document>
